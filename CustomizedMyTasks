@@ -21,8 +21,7 @@
                     <apex:selectOption itemLabel="Next 7 days + Overdue" itemValue="((ActivityDate<Today) or (ActivityDate>=today and ActivityDate<=next_week) or ActivityDate=null)" />
                     <apex:selectOption itemLabel="This Month" itemValue="ActivityDate=this_month"/>
                     <apex:selectOption itemLabel="All open" itemValue="((ActivityDate<=Today) or (ActivityDate>=Today))"/>
-                </apex:selectList>
-                <apex:commandLink style="padding-right: 21px; color: #015ba7; text-decoration:none;float:right;"  value="Unresolved Emails and Tasks" onclick="window.open('/6AC?src=8','_parent');" />
+                </apex:selectList>              
             </apex:pageBlockButtons>
             <apex:pageBlockSection id="emptyBlock" rendered="{!ISNULL(taskList)}">
                 <apex:pageBlockSectionItem dataStyle="align:center">You have no tasks scheduled for this period</apex:pageBlockSectionItem>
