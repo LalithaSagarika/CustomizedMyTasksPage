@@ -11,7 +11,7 @@
     <apex:form >
         <apex:pageBlock title="My Tasks" id="mytasks" >
             <apex:pageBlockButtons location="top" >
-                <apex:commandButton title="new" value="New"  onclick="window.top.location.href = '00T/e?retURL=%2Fhome%2Fhome.jsp';"/>
+                <apex:commandButton title="new" value="New"  onclick="window.top.location.href = '/00T/e?retURL=%2Fhome%2Fhome.jsp';"/>
                 <apex:selectList id="filter" value="{!dateFilter}" required="true" size="1" style="float:right;" styleClass="dropdown" >
                     <apex:actionSupport event="onchange" action="{!fetchTasks}" reRender="mytasks"/>
                     <apex:selectOption itemLabel="Today"  itemValue="ActivityDate=Today"   />
